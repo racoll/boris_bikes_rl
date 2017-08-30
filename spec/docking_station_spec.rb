@@ -17,6 +17,7 @@ describe DockingStation do
 
   it "dock a bike at a docking station" do
     expect(subject).to respond_to(:dock).with(1).argument
+    # expect(subject).to receive(:dock).with(an_instance_of(Bike))
   end
 
 
