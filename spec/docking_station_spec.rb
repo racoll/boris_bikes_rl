@@ -25,6 +25,13 @@ describe DockingStation do
   end
 
 
+  it "#bike should return a bike id" do
+    bike = Bike.new
+    subject.dock(bike)
+    expect(subject.bike).to eq bike
+  end
+
+
 end
 
 # docking_station.release_bike.is_a? Bike
