@@ -7,7 +7,6 @@ describe DockingStation do
   end
 
 
-
   it 'releases working bikes' do
     bike = subject.release_bike
     expect(bike).to be_an_instance_of(Bike)
@@ -15,9 +14,14 @@ describe DockingStation do
   end
 
 
-  it "dock a bike at a docking station" do
+  it "docks a bike at a docking station" do
     expect(subject).to respond_to(:dock).with(1).argument
     # expect(subject).to receive(:dock).with(an_instance_of(Bike))
+  end
+
+  it "should return the bike we dock" do
+    bike = Bike.new
+    expect(subject.dock(bike)).to eq bike
   end
 
 
