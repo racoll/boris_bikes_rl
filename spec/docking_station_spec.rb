@@ -34,7 +34,7 @@ describe "#dock" do
     expect(subject.dock(bike)).to eq bike
   end
 
-  it "#bike should return a bike id" do
+  it "#bike should return a bike" do
     bike = Bike.new
     subject.dock(bike)
     expect(subject.bike).to eq bike

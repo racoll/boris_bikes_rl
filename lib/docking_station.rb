@@ -2,7 +2,7 @@ require_relative 'bike'
 
 class DockingStation
 
-attr_reader :bike
+attr_reader :bike_array
 
   def release_bike
     if @bike.is_a? Bike
@@ -13,8 +13,9 @@ attr_reader :bike
   end
 
   def dock(bike)
+    raise "station is full" unless @bike == nil
     @bike = bike
-    return bike
+    return @bike
   end
 
   # def see_bike
